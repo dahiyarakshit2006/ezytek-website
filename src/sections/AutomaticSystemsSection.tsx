@@ -32,9 +32,13 @@ const AutomaticSystemsSection = () => {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.7, delay: index * 0.1 }}
             >
-              <div className="aspect-[4/3] overflow-hidden relative bg-gradient-to-br from-white/5 to-transparent flex items-center justify-center">
-                <span className="text-muted font-sans text-sm">{product.name}</span>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
+              <div className="aspect-[4/3] overflow-hidden relative">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-700" />
               </div>
               <div className="p-5 flex flex-col flex-grow">
                 <h3 className="font-serif text-lg">{product.name}</h3>

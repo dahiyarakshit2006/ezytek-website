@@ -30,20 +30,20 @@ const Navbar: React.FC<NavbarProps> = ({ onQuoteClick }) => {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50">
-        <div className="relative px-4 md:px-6 py-4 md:py-6">
+        <div className="relative px-4 md:px-6 py-3 md:py-4">
           <div
-            className={`max-w-6xl mx-auto rounded-full px-4 md:px-6 py-3 flex items-center justify-between transition-all duration-500 ${
-              scrolled ? 'liquid-glass' : 'bg-transparent border border-white/10'
+            className={`max-w-6xl mx-auto rounded-full px-4 md:px-5 py-2 flex items-center justify-between transition-all duration-500 border border-white/10 backdrop-blur-xl ${
+              scrolled ? 'bg-black/80' : 'bg-black/50'
             }`}
           >
             {/* Left */}
-            <Link to="/" className="flex items-center gap-3">
-              <div className="flex items-center justify-center bg-white/10 rounded-md p-1.5">
-                <Hexagon className="text-white fill-white" size={20} />
+            <Link to="/" className="flex items-center gap-2.5">
+              <div className="flex items-center justify-center bg-white/10 rounded-md p-1">
+                <Hexagon className="text-white fill-white" size={16} />
               </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-lg md:text-xl text-white leading-none">EzyTek Clean</span>
-                <span className="text-[9px] tracking-[0.2em] text-white/35 hidden lg:block mt-1">AUTOMOTIVE AUTOMATION</span>
+              <div className="flex items-center gap-2">
+                <span className="font-serif text-base md:text-lg text-white leading-none">EzyTek Clean</span>
+                <span className="text-[8px] tracking-[0.15em] text-white/30 hidden lg:block">EST. 2012</span>
               </div>
             </Link>
 

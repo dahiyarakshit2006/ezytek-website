@@ -23,9 +23,17 @@ const PhilosophySection = () => {
             transition={{ duration: 0.7 }}
             className="rounded-3xl overflow-hidden aspect-[4/5] relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-zinc-800 to-zinc-950 flex items-center justify-center transition-transform duration-700 group-hover:scale-103">
-              <span className="text-[rgba(255,255,255,0.35)] font-sans uppercase tracking-[0.15em] text-sm">Industrial Machinery</span>
-            </div>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            >
+              <source src="/assets/videos/machinery-detail.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-black/30" />
           </motion.div>
 
           <motion.div 

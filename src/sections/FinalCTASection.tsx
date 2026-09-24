@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, MessageCircle } from 'lucide-react';
 import LiquidButton from '../components/LiquidButton';
@@ -7,13 +6,22 @@ interface FinalCTASectionProps {
   onQuoteClick: () => void;
 }
 
-const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onQuoteClick }) => {
+const FinalCTASection = ({ onQuoteClick }: FinalCTASectionProps) => {
   return (
     <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-black py-20">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,_rgba(74,144,164,0.05)_0%,_transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,_rgba(74,144,164,0.03)_0%,_transparent_50%)]" />
-        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay" style={{ backgroundImage: "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')", backgroundRepeat: 'repeat' }} />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/assets/videos/final-cta.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60" />
       </div>
 
       <div className="relative z-10 text-center max-w-3xl mx-auto px-6">

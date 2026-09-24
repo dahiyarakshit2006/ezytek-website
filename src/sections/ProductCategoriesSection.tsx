@@ -53,17 +53,17 @@ const ProductCategoriesSection = () => {
               >
                 <Link to={`/products?category=${category.slug}`} className="block h-full">
                   <div 
-                    className={`liquid-glass rounded-2xl overflow-hidden relative cursor-pointer h-full transition-colors duration-500 hover:bg-white/5 ${isFeatured ? 'aspect-square md:aspect-auto' : 'aspect-square md:aspect-square py-8 px-6'}`}
+                    className={`liquid-glass rounded-2xl overflow-hidden relative cursor-pointer h-full transition-colors duration-500 hover:bg-white/5 ${isFeatured ? 'aspect-square md:aspect-auto' : 'aspect-square md:aspect-square'}`}
                     style={isFeatured ? { minHeight: '300px' } : {}}
                   >
-                    <div 
-                      className="absolute inset-0 opacity-[0.15] mix-blend-overlay transition-opacity duration-500 group-hover:opacity-30"
-                      style={{
-                        background: `linear-gradient(${135 + (index * 20)}deg, hsl(${hue}, 20%, 30%), transparent 70%)`
-                      }}
+                    <img 
+                      src={category.image} 
+                      alt={category.name}
+                      className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                     
-                    <div className={`relative z-10 flex flex-col justify-end h-full ${isFeatured ? 'p-6 md:p-8' : ''}`}>
+                    <div className={`relative z-10 flex flex-col justify-end h-full p-5 md:p-6 ${isFeatured ? 'md:p-8' : ''}`}>
                       <div className="flex justify-between items-end">
                         <div>
                           <h3 className={`font-serif text-white ${isFeatured ? 'text-2xl md:text-4xl' : 'text-lg md:text-xl'}`}>

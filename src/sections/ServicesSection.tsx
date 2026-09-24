@@ -26,9 +26,17 @@ const ServicesSection = () => {
             className="liquid-glass rounded-3xl overflow-hidden group cursor-pointer"
           >
             <div className="aspect-video overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                <span className="text-[rgba(255,255,255,0.35)] font-sans uppercase tracking-[0.15em] text-sm">Automatic Car Wash Systems</span>
-              </div>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              >
+                <source src="/assets/videos/automation-systems.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-black/30" />
             </div>
             <div className="p-6 md:p-8">
               <div className="text-xs font-sans tracking-[0.2em] uppercase text-[#4A90A4] mb-3">AUTOMATION</div>
@@ -51,9 +59,17 @@ const ServicesSection = () => {
             className="liquid-glass rounded-3xl overflow-hidden group cursor-pointer"
           >
             <div className="aspect-video overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-zinc-900 to-zinc-800 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                <span className="text-[rgba(255,255,255,0.35)] font-sans uppercase tracking-[0.15em] text-sm">Professional Equipment</span>
-              </div>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              >
+                <source src="/assets/videos/cleaning-equipment.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-black/30" />
             </div>
             <div className="p-6 md:p-8">
               <div className="text-xs font-sans tracking-[0.2em] uppercase text-[#4A90A4] mb-3">EQUIPMENT</div>

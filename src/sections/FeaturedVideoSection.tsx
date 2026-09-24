@@ -13,12 +13,17 @@ const FeaturedVideoSection = () => {
           transition={{ duration: 0.9 }}
           className="rounded-3xl overflow-hidden relative aspect-video"
         >
-          {/* Gradient placeholder */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-[#1a2f36] flex items-center justify-center">
-            <span className="text-[rgba(255,255,255,0.35)] font-sans uppercase tracking-[0.15em] text-sm">
-              EzyTek Brand Video
-            </span>
-          </div>
+          {/* Brand Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/assets/videos/brand-video.mp4" type="video/mp4" />
+          </video>
           
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
           

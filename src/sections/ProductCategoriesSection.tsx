@@ -1,20 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-// Using a mock fallback in case categories file doesn't export what we expect yet
-import { categories as mockCategories } from '../data/categories';
-
-// Fallback data if categories isn't defined or empty
-const defaultCategories = [
-  { id: '1', name: 'Automatic Brush Wash', productCount: 4, featured: true, slug: 'automatic-brush-wash' },
-  { id: '2', name: 'Touchless Wash', productCount: 3, featured: false, slug: 'touchless-wash' },
-  { id: '3', name: 'High Pressure Washers', productCount: 12, featured: false, slug: 'high-pressure-washers' },
-  { id: '4', name: 'Vacuum Cleaners', productCount: 8, featured: true, slug: 'vacuum-cleaners' },
-  { id: '5', name: 'Steam Cleaners', productCount: 5, featured: false, slug: 'steam-cleaners' },
-  { id: '6', name: 'Foam Tanks', productCount: 2, featured: false, slug: 'foam-tanks' }
-];
-
-const categoriesData = (mockCategories && mockCategories.length > 0) ? mockCategories : defaultCategories;
+import { categories } from '../data/categories';
 
 const ProductCategoriesSection = () => {
   return (
@@ -41,9 +28,8 @@ const ProductCategoriesSection = () => {
           }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
         >
-          {categoriesData.map((category, index) => {
+          {categories.map((category, index) => {
             const isFeatured = category.featured;
-            const hue = (index * 45) % 360;
             
             return (
               <motion.div 
@@ -70,7 +56,7 @@ const ProductCategoriesSection = () => {
                             {category.name}
                           </h3>
                           <div className="text-[rgba(255,255,255,0.35)] text-sm mt-1 transition-colors duration-500 group-hover:text-[rgba(255,255,255,0.7)]">
-                            {(category as any).productCount || (category as any).count} products
+                            {category.productCount} products
                           </div>
                         </div>
                         <ArrowUpRight className="text-white w-5 h-5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
